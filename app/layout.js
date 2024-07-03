@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import React from "react";
+import NavbarComponent from "./components/NavbarComponent"; // Ensure correct import
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +15,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
+      <body className={inter.className}>
+        <div className="row">
+          <NavbarComponent />
+        </div>
+        <div className="">
+          <div className="">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }

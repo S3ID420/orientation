@@ -1,94 +1,69 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import React from "react";
+import { Button } from "reactstrap";
+import "./Home.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slide from "./components/Slide"; // Ensure correct import
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="page-background bd-light">
+      <div className="d-flex">
+        <div className="my-auto ps-5 ms-5">
+          <h2 className="display-2">
+            Votre{" "}
+            <span
+              style={{
+                background: `-webkit-linear-gradient(45deg, #6675f7, #57007b)`,
+                WebkitBackgroundClip: `text`,
+                WebkitTextFillColor: `transparent`,
+              }}
+            >
+              guide
+            </span>
+          </h2>
+          <h1 className="display-2 fw-bold">
+            d'orientation{" "}
+            <span
+              style={{
+                background: `-webkit-linear-gradient(45deg, #6675f7, #57007b)`,
+                WebkitBackgroundClip: `text`,
+                WebkitTextFillColor: `transparent`,
+              }}
+            >
+              digitale{" "}
+            </span>
+          </h1>
+          <h5 className="mt-5 d-5" style={{ fontSize: "1.5rem" }}>
+            Nous vous aidons à choisir votre future avec
+          </h5>
+          <h5 className="pt-2" style={{ fontSize: "1.5rem" }}>
+            une approche personnalisée et des conseils d'experts.
+          </h5>
+          <div className="pt-5 mt-2">
+            <Button className="customButton">Commencer</Button>
+          </div>
+        </div>
+        <div
+          className=""
+          style={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img src="logo.png" alt="Logo" className="img-fluid large-img" />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="text-center mt-5 mb-4">
+        <h1 className="fw-bold me-5 pe-5">Nos services</h1>
+        <div className="ms-5 ps-5 pt-4">
+          <div className="col-12">
+            <Slide />
+          </div>
+        </div>
       </div>
     </main>
   );

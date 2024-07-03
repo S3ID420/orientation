@@ -1,0 +1,40 @@
+.page-background {
+  background-color: #F9F9FF; /* Replace with your desired background color */
+  height: 150vh; /* Ensures the background color extends to the full height of the viewport */
+  width: 100%;
+}
+
+.customButton {
+    background: linear-gradient(to left, #6675f7, #57007b);
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .customButton:hover {
+    background: none;
+    color: #6675f7;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid;
+    border-image: linear-gradient(to right, #57007b, #6675f7);
+    border-image-slice: 1;
+  }
+  
+  .customButton:active,
+  .customButton:focus {
+    background: linear-gradient(to right, #6675f7, #57007b);
+  }
+  .text-center {
+    text-align: center;
+
+  }
+  
+  .fw-bold {
+    font-weight: bold;
+    font-size: 2rem; /* Adjust size as needed */
+  }
