@@ -18,7 +18,7 @@ function Slide() {
     autoplay: true,
     autoplaySpeed: 2500,
     centerMode: true,
-    centerPadding: "0",
+    centerPadding: "15%",
     beforeChange: (current, next) => setActiveSlide(next),
     responsive: [
       {
@@ -26,6 +26,7 @@ function Slide() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "15%",
           infinite: true,
         },
       },
@@ -34,6 +35,7 @@ function Slide() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "30%", // Adjust padding to center
         },
       },
       {
@@ -41,6 +43,7 @@ function Slide() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "30%", // Adjust padding to center
         },
       },
     ],

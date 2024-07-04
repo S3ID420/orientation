@@ -84,7 +84,7 @@ const NavbarComponent = () => {
             </NavItem>
           </Nav>
           <NavbarText>
-            <Button  className="me-2">Se connecter</Button> 
+            <Link href="Signup"><Button  className="me-2">Se connecter</Button></Link>
           </NavbarText>
         </Collapse>
       </Navbar>

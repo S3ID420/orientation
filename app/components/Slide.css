@@ -1,12 +1,22 @@
+/* Slide.css */
+
 .slider-container {
   max-width: 100%;
   align-items: center;
   height: 200px;
+  text-align: center; /* Center the content */
 }
 
 .slick-track {
-  padding-bottom: 50px;
-  padding-left: 30px; /* Add padding to the bottom of the slick list */
+  height: 200px;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.slick-slider {
+  height: 200px;
+  margin: 0 auto; /* Center the slider horizontally */
 }
 
 .custom-card {
@@ -25,7 +35,6 @@
   border-image: linear-gradient(45deg, #6675f7 78%, #57007b) 1;
 }
 
-
 .card-title {
   font-size: 1.2rem;
   text-align: center;
@@ -42,6 +51,7 @@
 .card-title:not(.active) {
   color: gray;
 }
+
 .card-icon {
   display: flex;
   justify-content: center;
@@ -51,13 +61,7 @@
 
 .card-icon img {
   width: 55px; /* Set the width of the image */
-  height: 50px; /* Set the height of the image */object-fit: contain; /* Ensure the image fits inside the container */
-  padding: 5px; /* Initial border color */
-}
-
-
-.card-icon img {
-  width: 50px; /* Set the width of the image */
   height: 50px; /* Set the height of the image */
   object-fit: contain; /* Ensure the image fits inside the container */
+  padding: 5px; /* Initial border color */
 }

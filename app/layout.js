@@ -3,7 +3,7 @@ import "./globals.css";
 import React from "react";
 import NavbarComponent from "./components/NavbarComponent"; // Ensure correct import
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Footer from "./components/Footer.js";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +19,16 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body className={inter.className}>
-        <div className="row">
+      <body className="page-background">
+        <div className="">
           <NavbarComponent />
         </div>
-        <div className="">
+        <div className="pt-5">
           <div className="">{children}</div>
         </div>
+        <footer className="pt-5 mt-5 ">
+          <Footer/>
+        </footer>
       </body>
     </html>
   );

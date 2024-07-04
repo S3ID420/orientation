@@ -49,17 +49,16 @@ export default function Home() {
           className=""
           style={{
             flex: 1,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: "block", /* Changed to block for traditional centering */
+            textAlign: "center", /* Center the image */
           }}
         >
           <img src="logo.png" alt="Logo" className="img-fluid large-img" />
         </div>
       </div>
       <div className="text-center mt-5 mb-4">
-        <h1 className="fw-bold me-5 pe-5">Nos services</h1>
-        <div className="ms-5 ps-5 pt-4">
+        <h1 className="fw-bold">Nos services</h1>
+        <div className="pt-4">
           <div className="col-12">
             <Slide />
           </div>
