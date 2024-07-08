@@ -4,7 +4,9 @@ import { Button } from "reactstrap";
 import "./Home.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slide from "./components/Slide"; // Ensure correct import
+import Slide from "./components/Slide"; 
+import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -15,9 +17,9 @@ export default function Home() {
             Votre{" "}
             <span
               style={{
-                background: `-webkit-linear-gradient(45deg, #6675f7, #57007b)`,
-                WebkitBackgroundClip: `text`,
-                WebkitTextFillColor: `transparent`,
+                background: "-webkit-linear-gradient(45deg, #6675f7, #57007b)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
               guide
@@ -27,9 +29,9 @@ export default function Home() {
             d'orientation{" "}
             <span
               style={{
-                background: `-webkit-linear-gradient(45deg, #6675f7, #57007b)`,
-                WebkitBackgroundClip: `text`,
-                WebkitTextFillColor: `transparent`,
+                background: "-webkit-linear-gradient(45deg, #6675f7, #57007b)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
               }}
             >
               digitale{" "}
@@ -59,8 +61,11 @@ export default function Home() {
       <div className="text-center mt-5 mb-4">
         <h1 className="fw-bold">Nos services</h1>
         <div className="pt-4">
-          <div className="col-12">
+          <div className="col-12 position-relative">
             <Slide />
+            <Link href="/another-page" className="arrow-link">
+              <img src="/arrow.png" alt="Arrow" className="arrow-img" />
+            </Link>
           </div>
         </div>
       </div>

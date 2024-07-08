@@ -5,6 +5,8 @@ import NavbarComponent from "./components/NavbarComponent"; // Ensure correct im
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/Footer.js";
 
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
