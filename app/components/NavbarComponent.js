@@ -57,7 +57,7 @@ const NavbarComponent = () => {
             </NavItem>
             <NavItem>
               <Link
-                href="#actualites"
+                href="News"
                 onClick={() => handleNavLinkClick('actualites')}
                 className={`nav-link ${activeLink === 'actualites' ? 'active' : ''}`}
               >
@@ -75,9 +75,9 @@ const NavbarComponent = () => {
             </NavItem>
             <NavItem>
               <Link
-                href="#contact"
-                onClick={() => handleNavLinkClick('contact')}
-                className={`nav-link ${activeLink === 'contact' ? 'active' : ''}`}
+                href="Contact"
+                onClick={() => handleNavLinkClick('Contact')}
+                className={`nav-link ${activeLink === 'Contact' ? 'active' : ''}`}
               >
                 Contact Us
               </Link>

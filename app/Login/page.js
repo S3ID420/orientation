@@ -1,12 +1,12 @@
 // Login.js
-'use client'
-import React, { useState } from 'react';
-import './style.css';
+"use client";
+import React, { useState } from "react";
+import "./style.css";
 
 const Login = () => {
   const [form, setForm] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -53,12 +53,16 @@ const Login = () => {
             />
           </div>
           <div className="button-container">
-            <button type="submit" className="submit-button">Se connecter</button>
+            <button type="submit" className="submit-button">
+              Se connecter
+            </button>
           </div>
         </form>
         {/* Signup option */}
         <div className="signup-option">
-          <p>Vous n'avez pas de compte? <a href="/Signup">Créer un compte</a></p>
+          <p>
+            Vous n'avez pas de compte? <a href="/Signup">Créer un compte</a>
+          </p>
         </div>
       </div>
     </div>

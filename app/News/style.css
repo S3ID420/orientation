@@ -1,0 +1,85 @@
+.newsPage {
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 2000px;
+}
+
+.customGrid {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.newsCard {
+  background-color:transparent;
+  color: black;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #6675f7 78%, #57007b) 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.newsImage {
+  object-fit: cover;
+}
+
+.mainCard {
+  height: 100%;
+}
+
+.leftLargeCard {
+  height: 550px; 
+}
+
+.leftSmallCard {
+  height: 300px; 
+}
+
+.rightTallCard {
+  height: 600px;
+}
+
+.newsTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.newsDescription {
+  font-size: 1rem;
+  color: #666;
+}
+
+.readMoreButton {
+  background: linear-gradient(to left, #6675f7, #57007b);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.readMoreButton:hover {
+  background: none;
+  color: #6675f7;
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  border: 3px solid;
+  border-image: linear-gradient(to right, #57007b, #6675f7);
+  border-image-slice: 1;
+}
+
+.readMoreButton:active,
+.readMoreButton:focus {
+  background: linear-gradient(to right, #6675f7, #57007b);
+}
+.text{
+  font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(to right,#6675f7 5% ,#57007b 50% );
+  -webkit-background-clip: text; /* Clip text to background image */
+  background-clip: text;
+  color: transparent; 
+
+}
+
