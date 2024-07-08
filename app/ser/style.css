@@ -26,15 +26,15 @@
   object-fit: cover; /* Ensure the image covers the entire space */
 }
 
-.service-card .card-title-gradient {
-  background: -webkit-linear-gradient(#6675f7, #57007b);
+.service-card .card-title {
+  background: linear-gradient(45deg, #6675f7, #57007b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
 
 .page-title {
-  background: -webkit-linear-gradient(#6675f7, #57007b);
+  background: linear-gradient(45deg, #6675f7, #57007b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
