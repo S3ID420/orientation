@@ -39,7 +39,7 @@ const NavbarComponent = () => {
           <Nav className="mx-auto my-auto d-flex " navbar> 
             <NavItem>
               <Link
-                href="#AboutUs"
+                href="AboutUs"
                 onClick={() => handleNavLinkClick('AboutUs')}
                 className={`nav-link ${activeLink === 'AboutUs' ? 'active' : ''}`}
               >
@@ -48,7 +48,7 @@ const NavbarComponent = () => {
             </NavItem>
             <NavItem>
               <Link
-                href="#services"
+                href="ser"
                 onClick={() => handleNavLinkClick('services')}
                 className={`nav-link ${activeLink === 'services' ? 'active' : ''}`}
               >
@@ -66,7 +66,7 @@ const NavbarComponent = () => {
             </NavItem>
             <NavItem>
               <Link
-                href="#feedback"
+                href="Feedback"
                 onClick={() => handleNavLinkClick('feedback')}
                 className={`nav-link ${activeLink === 'feedback' ? 'active' : ''}`}
               >

@@ -25,11 +25,11 @@ const Footer = () => {
 					</Column>
 					<Column>
 						<Heading>Links</Heading>
-						<FooterLink href="#">About Us</FooterLink>
-						<FooterLink href="#">News</FooterLink>
-						<FooterLink href="#">Services</FooterLink>
-						<FooterLink href="#">Messagerie</FooterLink>
-						<FooterLink href="#">Feedback</FooterLink>
+						<FooterLink href="AboutUs">About Us</FooterLink>
+						<FooterLink href="News">News</FooterLink>
+						<FooterLink href="ser">Services</FooterLink>
+						<FooterLink href="Contact">Messagerie</FooterLink>
+						<FooterLink href="FeedBack">Feedback</FooterLink>
 					</Column>
 					<Column>
 						<Heading>Contact Us</Heading>

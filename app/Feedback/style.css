@@ -1,0 +1,86 @@
+/* style.css */
+
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff; /* Light background color */
+}
+
+.feedback-photo {
+    width: 60%; /* Make the photo container smaller */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center content horizontally */
+}
+
+.feedback-photo img {
+    width: 100%; /* Ensure the image takes up full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+}
+
+.feedback-form {
+    width: 75%; /* Make the form container larger */
+    background-color: transparent; /* Transparent background */
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif; /* Using Inter font */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.feedback-form label {
+    font-weight: bold;
+}
+
+.feedback-form .star {
+    font-size: 32px; /* Make the stars bigger */
+    color: #ccc;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.feedback-form .star.active {
+    color: #ffc107;
+}
+
+.feedback-form textarea {
+    height: 200px; /* Increase height of the textarea */
+    resize: none;
+    padding: 10px;
+    font-size: 16px; /* Increase font size */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-container{
+    color:#ffffff
+}
+.submit-button {
+    display: block;
+    font-weight: bold;
+    margin-top: 50px;
+    width: 250px; /* Adjust width */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to left, #6675f7, #57007b); /* Linear gradient background */
+    color: #ffffff;
+    font-size: 20px; /* Increase font size */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background: none;
+    color: #6675f7;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid;
+    border-image: linear-gradient(to right, #57007b, #6675f7);
+    border-image-slice: 1;
+}

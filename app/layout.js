@@ -1,10 +1,11 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import NavbarComponent from "./components/NavbarComponent"; // Ensure correct import
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/Footer.js";
-
+import './globals.css';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,10 +26,10 @@ export default function RootLayout({ children }) {
         <div className="">
           <NavbarComponent />
         </div>
-        <div className="pt-5">
+        <div className="pt">
           <div className="">{children}</div>
         </div>
-        <footer className="pt-5 mt-5 ">
+        <footer className="pt-5 ">
           <Footer/>
         </footer>
       </body>

@@ -1,0 +1,62 @@
+.slider-all {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh; /* Adjust height as needed */
+}
+.slick-slider{
+  height:100vh;
+}
+.slick-list{
+  height:100vh;
+}
+
+.slide {
+  position: relative;
+  height: 100vh; /* Adjust height as needed */
+  display: flex; 
+  align-items: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Ensure background image does not repeat */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 5em; /* Increase font size as needed */
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size:1.7em; /* Increase font size as needed */
+  line-height: 1.6;
+}
+
+/* Specific slide background images */
+.slide-image1 {
+  background-image: url('/1.jpg'); /* Ensure this image exists in the public folder */
+}
+
+.slide-image2 {
+  background-image: url('/2.jpg'); /* Ensure this image exists in the public/images folder */
+}
+
+.slide-image3 {
+  background-image: url('/3.jpg'); /* Ensure this image exists in the public/images folder */
+}

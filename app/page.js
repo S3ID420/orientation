@@ -2,8 +2,6 @@
 import React from "react";
 import { Button } from "reactstrap";
 import "./Home.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slide from "./components/Slide"; 
 import Link from 'next/link';
 
@@ -63,7 +61,7 @@ export default function Home() {
         <div className="pt-4">
           <div className="col-12 position-relative">
             <Slide />
-            <Link href="/another-page" className="arrow-link">
+            <Link href="ser" className="arrow-link">
               <img src="/arrow.png" alt="Arrow" className="arrow-img" />
             </Link>
           </div>

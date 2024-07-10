@@ -6,11 +6,11 @@ import "./style.css";
 
 // Define services with photos
 const services = [
-  { title: 'Service 1', photo: '/service1.jpg', link: '#service1' },
-  { title: 'Service 2', photo: '/service2.jpg', link: '#service2' },
-  { title: 'Service 3', photo: '/service3.jpg', link: '#service3' },
-  { title: 'Service 4', photo: '/service4.jpg', link: '#service4' },
-  { title: 'Service 5', photo: '/service5.jpg', link: '#service5' },
+  { title: 'Orienation universitaire', photo: '/service1.jpg', link: 'OrientationUni' },
+  { title: 'Orientation scolaire', photo: '/service2.jpg', link: '#service2' },
+  { title: 'Orientation professionnelle', photo: '/service3.jpg', link: '#service3' },
+  { title: "Test d'orienatation", photo: '/service4.jpg', link: '#service4' },
+  { title: 'Messagerie', photo: '/service5.jpg', link: '#service5' },
 ];
 
 const ServiceCard = ({ title, photo, link }) => (
