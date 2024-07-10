@@ -8,7 +8,7 @@ const Home = () => {
     <Container className="mt-5">
       <h1 className="page-title">Orientation Universitaire</h1>
       <Row className="mt-5">
-        <Col xs="12" sm="4" md='12' className="mb-4">
+        <Col xs="12" sm="4"  className="mb-4">
           <Card>
             <img className="card-img-top" src="calcul.jpg" alt="Card image cap" />
             <CardBody>
@@ -16,7 +16,7 @@ const Home = () => {
             </CardBody>
           </Card>
         </Col>
-        <Col xs="12" sm="4" md='12'  className="mb-4">
+        <Col xs="12" sm="4"   className="mb-4">
           <Card>
             <img className="card-img-top" src="unis.jpg" alt="Card image cap" />
             <CardBody>
@@ -24,7 +24,7 @@ const Home = () => {
             </CardBody>
           </Card>
         </Col>
-        <Col xs="12" sm="4" md='12'  className="mb-4">
+        <Col xs="12" sm="4"   className="mb-4">
           <Card>
             <img className="card-img-top" src="reo.jpg" alt="Card image cap" />
             <CardBody>
