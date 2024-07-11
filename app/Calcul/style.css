@@ -1,0 +1,98 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  select {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .subjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .subject-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: calc(33.333% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .subject-input label {
+    margin-bottom: 5px;
+  }
+  
+  .subject-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid gray;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+  }
+  
+  .subject-input input:focus {
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #57007b, #6675f7) 1;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: #57007b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background: none;
+    color: #6675f7;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid;
+    border-image: linear-gradient(to right, #57007b, #6675f7);
+    border-image-slice: 1;
+  }
+  
+  .results {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .results h2 {
+    margin-bottom: 10px;
+  }
+  
+  .results p {
+    font-size: 1.2em;
+  }

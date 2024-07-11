@@ -1,0 +1,78 @@
+/* PersonalityTest.css */
+
+.containerk {
+    max-width: 600px;
+    text-align: right;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.title {
+    text-align: right;
+    background-image: linear-gradient(45deg, #6675f7 78%, #57007b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label { 
+    font-size: large;
+    text-align: right;
+}
+
+.form-control {
+    text-align: right;
+    display: flex;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to left, #6675f7, #57007b); /* Linear gradient background */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+    background: none;
+    color: #6675f7;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid;
+    border-image: linear-gradient(to right, #57007b, #6675f7);
+    border-image-slice: 1;
+}
+
+.result-container {
+    margin-top: 40px; /* Ensure there is enough space between the form and results */
+    text-align: right;
+}
+
+.result-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.result-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-item {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 5px;
+}

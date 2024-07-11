@@ -25,7 +25,7 @@ const ServiceCard = ({ title, photo, link }) => (
 );
 
 const ServicesPage = () => (
-  <Container className="mt-5 container">
+  <Container className="mt-5 containerf">
     <Row className="mb-4">
       <Col>
         <h1 className="page-title">Our Services</h1>
