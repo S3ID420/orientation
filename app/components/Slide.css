@@ -35,20 +35,20 @@
   border-image: linear-gradient(45deg, #6675f7 78%, #57007b) 1;
 }
 
-.card-title {
+.titre {
   font-size: 1.2rem;
   text-align: center;
   transition: color 0.3s ease;
 }
 
-.card-title.active {
+.titre.active {
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #6675f7, #57007b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.card-title:not(.active) {
+.titre:not(.active) {
   color: gray;
 }
 

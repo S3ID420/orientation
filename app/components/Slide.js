@@ -89,7 +89,7 @@ function Slide() {
                 </div>
                 <CardTitle
                   tag="h5"
-                  className={`card-title ${activeSlide === index ? 'active' : ''}`}
+                  className={`titre ${activeSlide === index ? 'active' : ''}`}
                   style={{ fontSize: '1.5rem' }}
                 >
                   {card.title}
