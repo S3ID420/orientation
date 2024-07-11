@@ -62,12 +62,12 @@ export default function Home() {
   };
 
   return (
-    <div className="container">
-      <h1>Bac Score Calculator</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
+    <div className="containero">
+      <h1 className="titlo">Bac Score Calculator</h1>
+      <form className="formo" onSubmit={handleSubmit}>
+        <label className="labelo">
           Section:
-          <select value={section} onChange={handleSectionChange}>
+          <select className="selecto" value={section} onChange={handleSectionChange}>
             <option value="">Select a section</option>
             <option value="math">Math</option>
             <option value="sc">Science</option>
@@ -77,11 +77,12 @@ export default function Home() {
             <option value="eco">Economics</option>
           </select>
         </label>
-        <div className="subjects">
+        <div className="subjectso">
           {section && subjects[section].map((subject) => (
-            <div key={subject} className="subject-input">
-              <label>{subject}:</label>
+            <div key={subject} className="subjecto-input">
+              <label className="subjecto-label">{subject}:</label>
               <input
+                className="subjecto-input-field"
                 type="number"
                 value={grades[subject] || ''}
                 onChange={(e) => handleGradeChange(subject, e.target.value)}
@@ -89,13 +90,13 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <button type="submit">Calculate Score</button>
+        <button className="submito-button" type="submit">Calculate Score</button>
       </form>
       {average !== null && (
         <div className="results">
-          <h2>Results</h2>
-          <p>Average: {average}</p>
-          <p>Final Grade (FG): {fg}</p>
+          <h2 className="results-title">Results</h2>
+          <p className="average">Average: {average}</p>
+          <p className="final-grade">Final Grade (FG): {fg}</p>
         </div>
       )}
     </div>

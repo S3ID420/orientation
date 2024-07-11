@@ -1,22 +1,27 @@
-.container {
+.containero {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
   }
   
-  form {
+  .titlo {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .formo {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  label {
+  .labelo {
     margin-bottom: 10px;
     font-size: 1.2em;
   }
   
-  select {
+  .selecto {
     margin-bottom: 20px;
     padding: 10px;
     font-size: 1.2em;
@@ -26,7 +31,7 @@
     max-width: 400px;
   }
   
-  .subjects {
+  .subjectso {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -34,7 +39,7 @@
     width: 100%;
   }
   
-  .subject-input {
+  .subjecto-input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -42,11 +47,11 @@
     margin-bottom: 20px;
   }
   
-  .subject-input label {
+  .subjecto-label {
     margin-bottom: 5px;
   }
   
-  .subject-input input {
+  .subjecto-input-field {
     width: 100%;
     padding: 10px;
     font-size: 1em;
@@ -57,12 +62,12 @@
     transition: border-bottom-color 0.3s ease;
   }
   
-  .subject-input input:focus {
+  .subjecto-input-field:focus {
     border-bottom: 2px solid;
     border-image: linear-gradient(to right, #57007b, #6675f7) 1;
   }
   
-  button {
+  .submito-button {
     padding: 10px 20px;
     font-weight: bold;
     font-size: 1.2em;
@@ -74,10 +79,9 @@
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
+  .submito-button:hover {
     background: none;
     color: #6675f7;
-    transform: scale(1.1);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     border: 3px solid;
     border-image: linear-gradient(to right, #57007b, #6675f7);
@@ -89,10 +93,11 @@
     text-align: center;
   }
   
-  .results h2 {
+  .results-title {
     margin-bottom: 10px;
   }
   
-  .results p {
+  .average, .final-grade {
     font-size: 1.2em;
   }
+  

@@ -6,7 +6,7 @@ import './ori.css';
 
 const UNI = () => {
   return (
-    <Container className="mt-5">
+    <Container >
       <h1 className="page-title">Orientation Universitaire</h1>
       <Row className="mt-5">
         <Col xs="12" sm="4" className="mb-4">
