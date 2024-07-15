@@ -1,0 +1,22 @@
+[
+    {
+      "code": "001",
+      "filliere": "Computer Science",
+      "university": "University A",
+      "etablissement": "Faculty of Sciences",
+      "gouvernorat": "Tunis",
+      "critere": "FG+M",
+      "score": 85
+    },
+    {
+      "code": "002",
+      "filliere": "Engineering",
+      "university": "University B",
+      "etablissement": "Faculty of Engineering",
+      "gouvernorat": "Sfax",
+      "critere": "FG+S",
+      "score": 90
+    }
+
+  ]
+  

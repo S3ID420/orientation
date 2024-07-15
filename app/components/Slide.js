@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from "react";
-import Slider from "react-slick";
+import Slider,{Range} from "react-slick";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 import './Slide.css'; // Import the custom CSS file
 

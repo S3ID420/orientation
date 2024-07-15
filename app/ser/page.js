@@ -7,7 +7,7 @@ import "./style.css";
 // Define services with photos
 const services = [
   { title: 'Orienation universitaire', photo: '/service1.jpg', link: 'OrientationUni' },
-  { title: 'Orientation scolaire', photo: '/service2.jpg', link: '#service2' },
+  { title: 'Orientation scolaire', photo: '/service2.jpg', link: 'OrientationSco' },
   { title: 'Orientation professionnelle', photo: '/service3.jpg', link: '#service3' },
   { title: "Test d'orienatation", photo: '/service4.jpg', link: 'testpage' },
   { title: 'Messagerie', photo: '/service5.jpg', link: '#service5' },
