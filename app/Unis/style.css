@@ -12,4 +12,15 @@
     background-color: #f2f2f2;
     text-align: left;
   }
+  .to{
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(to right,#6675f7 5% ,#57007b 50% );
+  -webkit-background-clip: text; /* Clip text to background image */
+  background-clip: text;
+  color: transparent; 
+  }
   

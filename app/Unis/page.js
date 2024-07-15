@@ -33,7 +33,7 @@ const Unis = () => {
 
   return (
     <div>
-      <h1>University List</h1>
+      <h1 className='to'>University List</h1>
       <FilterComponent onFilterChange={handleFilterChange} />
       <table className="table">
         <thead>
