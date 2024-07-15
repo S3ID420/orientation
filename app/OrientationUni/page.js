@@ -20,7 +20,7 @@ const UNI = () => {
           </Link>
         </Col>
         <Col xs="12" sm="4" className="mb-4">
-          <Link href="#liste-facultes">
+          <Link href="Unis">
             <Card className='c'>
               <img className="card-img-top" src="unis.jpg" alt="Card image cap" />
               <CardBody>
