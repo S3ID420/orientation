@@ -1,43 +1,37 @@
-'use client'
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
-import './style.css';
+import './style.css'
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const newsData = [
-      {
-        title: "Main News: New Education Reforms in Tunisia",
-        description: "The Tunisian government has announced new reforms aimed at improving the education system.",
-        url: "http://www.edunet.tn/link_to_news_main",
-        imageUrl: "edu.jpg",
-        type: "main"
-      },
-      {
-        title: "Education Technology in Tunisian Schools",
-        description: "Schools across Tunisia are integrating new technologies into their classrooms.",
-        url: "http://www.edunet.tn/link_to_news_1",
-        imageUrl: "edu.jpg",
-        type: "left-large"
-      },
-      {
-        title: "Short Update: Teacher Training Programs",
-        description: "New teacher training programs are being introduced.",
-        url: "http://www.edunet.tn/link_to_news_2",
-        type: "left-small"
-      },
-      {
-        title: "Tall News: Education Budget Increase",
-        description: "The budget for education has been significantly increased to support new initiatives.",
-        url: "http://www.edunet.tn/link_to_news_tall",
-        imageUrl: "edu.jpg",
-        type: "right-tall"
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/news');
+        if (!response.ok) {
+          throw new Error(`Error fetching news: ${response.statusText}`);
+        }
+        const data = await response.json();
+        if (!Array.isArray(data)) {
+          throw new TypeError('Fetched data is not an array');
+        }
+        setNews(data);
+      } catch (error) {
+        console.error('Error fetching news data:', error);
+        setError(error.message);
       }
-    ];
-    setNews(newsData);
+    };
+
+    fetchData();
   }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <Container className="newsPage">
