@@ -26,7 +26,7 @@ const ContactForm = () => {
       </div>
    
       <Form onSubmit={(e) => e.preventDefault()}>
-        <FormGroup className="form-group">
+        <FormGroup className="form-group1">
           <Input
             type="text"
             name="name"
@@ -38,7 +38,7 @@ const ContactForm = () => {
           />
           <label htmlFor="name">Name</label>
         </FormGroup>
-        <FormGroup className="form-group">
+        <FormGroup className="form-group1">
           <Input
             type="email"
             name="email"
@@ -50,7 +50,7 @@ const ContactForm = () => {
           />
           <label htmlFor="email">Email</label>
         </FormGroup>
-        <FormGroup className="form-group">
+        <FormGroup className="form-group1">
           <Input
             type="textarea"
             name="message"
