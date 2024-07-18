@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
 import { Range } from 'react-range';
-import './FilterComponent.css'; // Import your CSS file for custom styling
+import './FilterComponent.css'; // Ensure your CSS file is correctly imported for custom styling
 
 const FilterComponent = ({ onFilterChange }) => {
   const [typeBac, setTypeBac] = useState('');
   const [university, setUniversity] = useState('');
   const [etablissement, setEtablissement] = useState('');
   const [filliere, setFilliere] = useState('');
-  const [scoreRange, setScoreRange] = useState([0, 100]);
+  const [scoreRange, setScoreRange] = useState([50, 220]);
 
   const handleFilterChange = () => {
     onFilterChange({ typeBac, university, etablissement, filliere, scoreRange });
@@ -88,8 +88,8 @@ const FilterComponent = ({ onFilterChange }) => {
             <Label for="scoreRange">Score Range</Label>
             <Range
               step={1}
-              min={0}
-              max={100}
+              min={50}
+              max={220}
               values={scoreRange}
               onChange={(values) => setScoreRange(values)}
               renderTrack={({ props, children }) => (
@@ -104,9 +104,9 @@ const FilterComponent = ({ onFilterChange }) => {
                   />
                 </div>
               )}
-              renderThumb={({ props, isDragged }) => (
+              renderThumb={({ props: thumbProps, isDragged }) => (
                 <div
-                  {...props}
+                  {...thumbProps}
                   className={`range-thumb ${isDragged ? 'is-dragged' : ''}`}
                 />
               )}

@@ -1,10 +1,10 @@
 /* PersonalityTest.css */
 
 .containerk {
-    max-width: 600px;
+    max-width: 1000px;
     text-align: right;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     background-color: transparent;
 }
@@ -18,11 +18,15 @@
 
 .form-group {
     margin-bottom: 20px;
+    text-align: right;
+    padding: 20px;
+
 }
 
 .form-label { 
     font-size: large;
     text-align: right;
+    padding: 20px;
 }
 
 .form-control {

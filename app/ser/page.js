@@ -28,7 +28,7 @@ const ServicesPage = () => (
   <Container className="mt-5 containerf">
     <Row className="mb-4">
       <Col>
-        <h1 className="page-title">Our Services</h1>
+        <h1 className="page-title1">Our Services</h1>
       </Col>
     </Row>
     <Row>
@@ -40,7 +40,7 @@ const ServicesPage = () => (
           style={{ maxHeight: '80vh', width: '100%', objectFit: 'cover' }}
         />
       </Col>
-      <Col md="6">
+      <Col md="6" className='cards'>
         <Row>
           {services.slice(0, 2).map((service, index) => (
             <Col key={index} sm="6">

@@ -1,7 +1,8 @@
-'use client';
+// pages/unis.js
+'use client'
 import React, { useState, useEffect } from 'react';
-import './style.css';
 import FilterComponent from '../components/FilterComponent';
+import "./style.css"
 
 const Unis = () => {
   const [universities, setUniversities] = useState([]);
@@ -9,10 +10,15 @@ const Unis = () => {
 
   useEffect(() => {
     const fetchUniversities = async () => {
-      const res = await fetch('/universities.json');
-      const data = await res.json();
-      setUniversities(data);
-      setFilteredUniversities(data);
+      try {
+        const res = await fetch('/api/unis');
+        const data = await res.json();
+        console.log('Fetched universities:', data); // Debugging log
+        setUniversities(data);
+        setFilteredUniversities(data); // Initialize filtered data
+      } catch (error) {
+        console.error('Error fetching universities:', error);
+      }
     };
     fetchUniversities();
   }, []);
@@ -33,9 +39,9 @@ const Unis = () => {
 
   return (
     <div>
-      <h1 className='to'>University List</h1>
+      <h1 className='page-title'>University List</h1>
       <FilterComponent onFilterChange={handleFilterChange} />
-      <table className="table">
+      <table className="unis-table">
         <thead>
           <tr>
             <th>Code</th>

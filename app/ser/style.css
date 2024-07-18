@@ -4,8 +4,8 @@
   text-decoration: none;
   border: 1px solid #ccc;
   transition: transform 0.3s, border-color 0.3s;
-  height: 350px;
-  width: 400px; 
+  height: 21.875rem;
+  width: 25rem; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,7 +36,7 @@
   text-decoration: none;
 }
 
-.page-title {
+.page-title1 {
   background: linear-gradient(45deg, #6675f7, #57007b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

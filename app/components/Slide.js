@@ -16,7 +16,7 @@ function Slide() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 1500, 
     centerMode: true,
     centerPadding: "15%",
     beforeChange: (current, next) => setActiveSlide(next),
