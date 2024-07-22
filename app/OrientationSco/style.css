@@ -13,6 +13,11 @@
       transform: translateY(-40%) scale(1.1);
     }
   }
+  .hoh{
+    background-color: #e9d1f3;
+    height: 70vh;
+    
+  }
   
   .card-animate {
     animation: fadeIn 0.5s ease-in-out;
@@ -37,19 +42,25 @@
     color: inherit;
   }
   
-  .page-title {
-    font-size: 2.5rem;
+  .pages-title {
+    font-size: 3.5rem;
     text-align: center;
     margin-bottom: 50px;
-    background: -webkit-linear-gradient(45deg, #6675f7, #57007b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 1500;
+    color: white;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+  }
+  .page-title::before{
+    position: absolute;
+
   }
   
   .containeri {
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
     padding: 20px;
+    
+
     
 }
 

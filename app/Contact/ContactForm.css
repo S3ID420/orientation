@@ -81,7 +81,7 @@
   color: #6675f7;
 }
 
-.contact-form button {
+.sub {
   display: block;
   width: 250px;
   padding: 15px;
@@ -96,7 +96,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form button:hover {
+.sub:hover {
   background: none;
   color: #6675f7;
   transform: scale(1.1);
@@ -105,3 +105,22 @@
   border-image: linear-gradient(to right, #57007b, #6675f7);
   border-image-slice: 1;
 }
+.toast-success {
+  background-color: #8d2aff !important;
+  color: white !important;
+}
+
+.toast-error {
+  background-color: #f44336 !important;
+  color: white !important;
+}
+.toast-close-button {
+  color: white !important;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.toast-close-button:hover {
+  opacity: 1;
+}
+

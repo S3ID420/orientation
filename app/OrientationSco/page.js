@@ -63,8 +63,9 @@ const Diagram = () => {
   );
 
   return (
+    <div className='hoh'>
     <Container fluid className="containeri p-3">
-      <h1 className="page-title">Orientation Scolaire</h1>
+      <h1 className="pages-title">Orientation Scolaire</h1>
       <Row className="justify-content-center">
         <Col md="6">
           {renderCard('1ere annee', '1ere-annee', '', true)}
@@ -137,6 +138,7 @@ const Diagram = () => {
         </>
       )}
     </Container>
+    </div>
   );
 };
 
