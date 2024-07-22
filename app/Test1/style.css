@@ -1,12 +1,16 @@
-/* PersonalityTest.css */
-
 .containerk {
     max-width: 1000px;
     text-align: right;
     margin: 0 auto;
     padding: 40px;
     border-radius: 8px;
-    background-color: transparent;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.containerk:hover {
+    background-color: #ffffff;
 }
 
 .title {
@@ -14,38 +18,45 @@
     background-image: linear-gradient(45deg, #6675f7 78%, #57007b);
     -webkit-background-clip: text;
     color: transparent;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .form-group {
     margin-bottom: 20px;
-    text-align: right;
     padding: 20px;
-
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-label { 
-    font-size: large;
-    text-align: right;
-    padding: 20px;
+    font-size: 1.1rem;
 }
 
 .form-control {
     text-align: right;
-    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #6675f7;
+    box-shadow: 0 0 0 2px rgba(102, 117, 247, 0.2);
 }
 
 .btn-submit {
     display: block;
     width: 100%;
     margin-top: 25px;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(to left, #6675f7, #57007b); /* Linear gradient background */
+    background: linear-gradient(to left, #6675f7, #57007b);
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 20px;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -53,21 +64,30 @@
 .btn-submit:hover {
     background: none;
     color: #6675f7;
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    border: 3px solid;
-    border-image: linear-gradient(to right, #57007b, #6675f7);
-    border-image-slice: 1;
+    border: 2px solid #6675f7;
 }
 
 .result-container {
-    margin-top: 40px; /* Ensure there is enough space between the form and results */
+    margin-top: 40px;
     text-align: right;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .result-title {
     font-size: 1.5rem;
     color: #333;
+    margin-bottom: 10px;
 }
 
 .result-list {
@@ -79,4 +99,9 @@
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.result-item:hover {
+    color: #6675f7;
 }

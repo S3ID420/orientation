@@ -9,6 +9,7 @@ import {
   Input,
   Button
 } from 'reactstrap';
+import { useSpring, animated } from '@react-spring/web';
 import "./style.css"
 
 const PersonalityTest = () => {
@@ -97,45 +98,47 @@ const PersonalityTest = () => {
     const { id, value } = e.target;
     setAnswers({ ...answers, [id]: value });
   };
+  const fadeIn = useSpring({ opacity: results ? 1 : 0, config: { duration: 500 } });
 
   
   return (
     <Container className="containerk py-4">
-      <h2 className="title mb-4">استبيان الشخصية</h2>
-      <Form onSubmit={handleSubmit}>
-        {questions.map((question) => (
-          <FormGroup key={question.id} className="form-group">
-            <Label for={question.id}>{question.text}</Label>
-            <Input
-              type="select"
-              name={question.id}
-              id={question.id}
-              onChange={handleChange}
-              className="form-control"
-              required
-            >
-              <option value="">اختر الإجابة</option>
-              <option value="1">لا</option>
-              <option value="2">قليلا</option>
-              <option value="3">أحيانا</option>
-              <option value="4">نعم</option>
-              <option value="5">كثيرا</option>
-            </Input>
-          </FormGroup>
-        ))}
-        <Button type="submit" color="primary" className="btn-submit">احسب النتيجة</Button>
-      </Form>
-      {results && (
-        <div className="result-container">
-          <h3 className="result-title">النتيجة:</h3>
-          <ul className="result-list">
-            {results.map((type, index) => (
-              <li key={index} className="result-item">{type}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </Container>
-  );
+    <h2 className="title mb-4">استبيان الشخصية</h2>
+    <Form onSubmit={handleSubmit}>
+      {questions.map((question) => (
+        <FormGroup key={question.id} className="form-group">
+          <Label for={question.id}>{question.text}</Label>
+          <Input
+            type="select"
+            name={question.id}
+            id={question.id}
+            onChange={handleChange}
+            className="form-control"
+            required
+          >
+            <option value="">اختر الإجابة</option>
+            <option value="1">لا</option>
+            <option value="2">قليلا</option>
+            <option value="3">أحيانا</option>
+            <option value="4">نعم</option>
+            <option value="5">كثيرا</option>
+          </Input>
+        </FormGroup>
+      ))}
+      <Button type="submit" color="primary" className="btn-submit">احسب النتيجة</Button>
+    </Form>
+    {results && (
+      <animated.div style={fadeIn} className="result-container">
+        <h3 className="result-title">النتيجة:</h3>
+        <ul className="result-list">
+          {results.map((type, index) => (
+            <li key={index} className="result-item">{type}</li>
+          ))}
+        </ul>
+      </animated.div>
+    )}
+  </Container>
+);
 };
+
 export default PersonalityTest;
