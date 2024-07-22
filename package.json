@@ -15,6 +15,8 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.8",
     "mongoose": "^8.5.1",
     "next": "^14.2.4",
     "nodemailer": "^6.9.14",
@@ -29,10 +31,16 @@
     "resend": "^3.4.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.4",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss": "^3.4.6"
   },
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.4"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
