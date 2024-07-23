@@ -9,7 +9,8 @@ import {
   Input,
   Button
 } from 'reactstrap';
-import { useSpring, animated } from '@react-spring/web';
+import Popup from 'reactjs-popup';
+
 import "./style.css"
 
 const PersonalityTest = () => {
@@ -48,6 +49,14 @@ const PersonalityTest = () => {
     { id: 'E', text: 'هل تميل إلى تحمل المسؤولية للقيادة أو المبادرة داخل الفصل؟' },
     { id: 'S', text: 'هل تميل في دراستك إلى العمل الجماعي انطلاقا من رغبتك في خدمة من حولك؟' },
   ];
+  const descriptions = {
+    R: 'شخصية واقعية: تفضل الأنشطة العملية واليدوية',
+    I: 'شخصية فكرية: تهتم بالتفكير والتحليل',
+    E: 'شخصية قيادية: تميل إلى تنظيم وتحمل المسؤولية',
+    A: 'شخصية فنية: تهتم بالإبداع والأنشطة الفنية',
+    S: 'شخصية اجتماعية: تحب مساعدة الآخرين والعمل الجماعي',
+    C: 'شخصية تقليدية: تفضل التنظيم والمهام المكتبية',
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -98,47 +107,54 @@ const PersonalityTest = () => {
     const { id, value } = e.target;
     setAnswers({ ...answers, [id]: value });
   };
-  const fadeIn = useSpring({ opacity: results ? 1 : 0, config: { duration: 500 } });
+  
 
   
-  return (
+  
+   return (
     <Container className="containerk py-4">
-    <h2 className="title mb-4">استبيان الشخصية</h2>
-    <Form onSubmit={handleSubmit}>
-      {questions.map((question) => (
-        <FormGroup key={question.id} className="form-group">
-          <Label for={question.id}>{question.text}</Label>
-          <Input
-            type="select"
-            name={question.id}
-            id={question.id}
-            onChange={handleChange}
-            className="form-control"
-            required
-          >
-            <option value="">اختر الإجابة</option>
-            <option value="1">لا</option>
-            <option value="2">قليلا</option>
-            <option value="3">أحيانا</option>
-            <option value="4">نعم</option>
-            <option value="5">كثيرا</option>
-          </Input>
-        </FormGroup>
-      ))}
-      <Button type="submit" color="primary" className="btn-submit">احسب النتيجة</Button>
-    </Form>
-    {results && (
-      <animated.div style={fadeIn} className="result-container">
-        <h3 className="result-title">النتيجة:</h3>
-        <ul className="result-list">
-          {results.map((type, index) => (
-            <li key={index} className="result-item">{type}</li>
-          ))}
-        </ul>
-      </animated.div>
-    )}
-  </Container>
-);
+      <h2 className="title mb-4">استبيان الشخصية</h2>
+      <Form onSubmit={handleSubmit}>
+        {questions.map((question) => (
+          <FormGroup key={question.id} className="form-group">
+            <Label for={question.id}>{question.text}</Label>
+            <Input
+              type="select"
+              name={question.id}
+              id={question.id}
+              onChange={handleChange}
+              className="form-control"
+              required
+            >
+              <option value="">اختر الإجابة</option>
+              <option value="1">لا</option>
+              <option value="2">قليلا</option>
+              <option value="3">أحيانا</option>
+              <option value="4">نعم</option>
+              <option value="5">كثيرا</option>
+            </Input>
+          </FormGroup>
+        ))}
+        <Button type="submit" color="primary" className="btn-submit">احسب النتيجة</Button>
+      </Form>
+      
+      {results && (
+        <Popup open={true} onClose={() => setResults(null)} modal>
+          
+            <h3 className="result-title">: النتيجة</h3>
+            <ul className="result-list">
+              {results.map((type, index) => (
+                <li key={index} className="result-item">
+                   {descriptions[type]} : {type}
+                </li>
+              ))}
+            </ul>
+            <Button color="secondary" onClick={() => setResults(null)}>إغلاق</Button>
+          
+        </Popup>
+      )}
+    </Container>
+  );
 };
 
 export default PersonalityTest;
