@@ -1,12 +1,13 @@
-'use client'
-import React from "react";
-import { Button } from "reactstrap";
-import "./Home.css";
-import Slide from "./components/Slide"; 
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Button } from 'reactstrap';
 import Link from 'next/link';
 
+import './Home.css';
+import Slide from './components/Slide';
 
 export default function Home() {
+
   return (
     <main className="page-background bd-light">
       <div className="d-flex">
@@ -49,8 +50,8 @@ export default function Home() {
           className=""
           style={{
             flex: 1,
-            display: "block", /* Changed to block for traditional centering */
-            textAlign: "center", /* Center the image */
+            display: "block", 
+            textAlign: "center",
           }}
         >
           <img src="logo.png" alt="Logo" className="img-fluid large-img" />
@@ -67,6 +68,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
     </main>
   );
 }

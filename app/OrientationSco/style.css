@@ -61,9 +61,7 @@
   }
   
   .pages-title {
-    background: linear-gradient(45deg, #6675f7, #57007b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:rgb(71, 71, 177);
     text-align: center;
     font-size : 50px;
     font-weight: bold;

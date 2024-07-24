@@ -11,6 +11,7 @@ const DashboardPage = () => {
   const [showPasswordModal, setShowPasswordModal] = useState(true); // Show modal initially
   const [news, setNews] = useState([]);
   const [unis, setUnis] = useState([]);
+  const [feedbacks, setFeedbacks] = useState([]);
   const [newNews, setNewNews] = useState({
     title: '',
     description: '',
@@ -53,8 +54,20 @@ const DashboardPage = () => {
         }
       };
 
+      const fetchFeedbacks = async () => {
+        try {
+          const response = await fetch('/api/feedback');
+          if (!response.ok) throw new Error('Failed to fetch feedbacks');
+          const data = await response.json();
+          setFeedbacks(data);
+        } catch (error) {
+          setAlert({ message: 'Error fetching feedbacks', color: 'danger' });
+        }
+      };
+
       fetchNews();
       fetchUnis();
+      fetchFeedbacks();
     }
   }, [isAdmin]);
 
@@ -145,16 +158,6 @@ const DashboardPage = () => {
 
   return (
     <div>
-      <Navbar color="dark" dark expand="md">
-        <Container>
-          <NavbarBrand tag={Link} href="/dashboard">Admin Dashboard</NavbarBrand>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink tag={Link} href="/dashboard">Manage News & Universities</NavLink>
-            </NavItem>
-          </Nav>
-        </Container>
-      </Navbar>
 
       <Container className="mt-4">
         {alert && <Alert color={alert.color}>{alert.message}</Alert>}
@@ -337,6 +340,28 @@ const DashboardPage = () => {
                   <td>
                     <Button color="danger" onClick={() => handleDeleteUni(item._id)}>Delete</Button>
                   </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </section>
+
+        <section className="mt-5">
+          <h2>Manage Feedbacks</h2>
+          <Table className="mt-4">
+            <thead>
+              <tr>
+                <th>Rating</th>
+                <th>Feedback</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {feedbacks.map((item) => (
+                <tr key={item._id}>
+                  <td>{item.rating}</td>
+                  <td>{item.feedback}</td>
+                  <td>{item.createdAt}</td>
                 </tr>
               ))}
             </tbody>

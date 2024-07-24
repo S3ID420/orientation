@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
-import NavbarComponent from "./components/NavbarComponent"; // Ensure correct import
+import NavbarComponent from "./components/NavbarComponent"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./components/Footer.js";
 import './globals.css';
