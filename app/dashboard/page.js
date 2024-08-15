@@ -1,8 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Container, Form, FormGroup, Label, Input, Button, Table, Navbar, NavbarBrand, Nav, NavItem, NavLink, Alert } from 'reactstrap';
-import Link from 'next/link';
+import { Container, Form, FormGroup, Label, Input, Button, Table,Alert } from 'reactstrap';
 import PasswordModal from '../components/PasswordModal';
 
 const DashboardPage = () => {
