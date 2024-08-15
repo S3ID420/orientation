@@ -21,7 +21,7 @@
 }
 
 .custom-card {
-  width: 350px; /* Adjusted width of each card */
+  width: 20rem; /* Adjusted width of each card */
   border: 2px solid transparent;
   border-radius: 10px;
   margin-top: 20px;

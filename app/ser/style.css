@@ -4,8 +4,8 @@
   text-decoration: none;
   border: 1px solid #ccc;
   transition: transform 0.3s, border-color 0.3s;
-  height: 21.875rem;
-  width: 25rem; 
+  height: 19rem;
+  width: 20rem; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,7 +24,7 @@
 
 .service-card .card-img-top {
   width: 100%;
-  height: 250px; /* Set the height of the image */
+  height: 15rem; /* Set the height of the image */
   object-fit: cover; /* Ensure the image covers the entire space */
 }
 
